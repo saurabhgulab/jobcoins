@@ -8,7 +8,7 @@ import {
   Cryptocurrencies,
   News,
   CryptoDetails,
-} from "./components/Navbar";
+} from "./components";
 
 const App = () => {
   return (

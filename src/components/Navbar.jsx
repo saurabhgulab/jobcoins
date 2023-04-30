@@ -8,7 +8,7 @@ import {
   BulbOutlined,
   MenuOutlined,
 } from "@ant-design/icons";
-import icon from "../images/logo.png";
+import icon from "../images/brand.png";
 
 const Navbar = (props) => {
   return (
