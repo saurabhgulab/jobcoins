@@ -143,12 +143,14 @@ const CryptoDetails = () => {
             </p>
           </Col>
           {stats.map(({ icon, title, value }) => (
-            <Col className="coin-stats">
-              <Col className="coin-stats-name">
-                <Text>{icon}</Text>
-                <Text>{title}</Text>
+            <Col className="coin-stats" key={value}>
+              <Col className="coin-stats-name" key={value}>
+                <Text key={icon}>{icon}</Text>
+                <Text key={title}>{title}</Text>
               </Col>
-              <Text className="stats">{value}</Text>
+              <Text className="stats" key={value}>
+                {value}
+              </Text>
             </Col>
           ))}
         </Col>
@@ -163,12 +165,14 @@ const CryptoDetails = () => {
             </p>
           </Col>
           {genericStats.map(({ icon, title, value }) => (
-            <Col className="coin-stats">
-              <Col className="coin-stats-name">
-                <Text>{icon}</Text>
-                <Text>{title}</Text>
+            <Col className="coin-stats" key={value}>
+              <Col className="coin-stats-name" key={value}>
+                <Text key={icon}>{icon}</Text>
+                <Text key={title}>{title}</Text>
               </Col>
-              <Text className="stats">{value}</Text>
+              <Text className="stats" key={value}>
+                {value}
+              </Text>
             </Col>
           ))}
         </Col>
@@ -186,10 +190,15 @@ const CryptoDetails = () => {
           </Title>
           {cryptoDetails.links?.map((link) => (
             <Row className="coin-link" key={link.name}>
-              <Title level={5} className="link-name">
+              <Title level={5} className="link-name" key={link.type}>
                 {link.type}
               </Title>
-              <a href={link.url} target="_blank" rel="noreferrer">
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noreferrer"
+                key={link.name}
+              >
                 {link.name}
               </a>
             </Row>
